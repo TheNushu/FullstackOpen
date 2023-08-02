@@ -25,5 +25,5 @@ sequenceDiagram
     server-->>browser: [{ content: "test2", date: "2023-08-02T12:24:57.336Z" }, ... ]
     deactivate server
 
-    Note right of browser: The browser executes the callback function that renders the notes
+    Note right of browser: The browser dynamically rewrites the content of the page, not needing to reload.
 ```

@@ -16,6 +16,5 @@ sequenceDiagram
 
     browser->>server:  HTTP POST to the server of the new note
     activate server
-    server-->>browser: 
     deactivate server
 ```

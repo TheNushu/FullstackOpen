@@ -9,7 +9,9 @@ const Button = (props) => (
 const StatisticLine = (props) => {
   const {text, value, extra} = props
   return (
-    <p>{text} {value}{extra}</p>
+    <>
+      {text} <span style={{ float: 'right' }}>{value}{extra}</span>
+    </>
   )
 }
 
@@ -52,16 +54,15 @@ const Statistics = (props) => {
   )
 }
 
+const setToValue = (newValue, setValueFunction) => {
+  console.log('value now', newValue) 
+  setValueFunction(newValue)
+}
 
 const App = () => {
   const [good, setGood] = useState(0)
   const [neutral, setNeutral] = useState(0)
   const [bad, setBad] = useState(0)
-
-  const setToValue = (newValue, setValueFunction) => {
-    console.log('value now', newValue) 
-    setValueFunction(newValue)
-  }
 
   return (
     <div>
